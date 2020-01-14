@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/3b56dc2a5c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Score Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="title">Score Calculator</h1>
+    </header>
+    <div class="inputContainer">
+      <input type="number" id="scoreInput" placeholder="What was your grade?">
+      <input type="number" id="scoreTotal" placeholder="What was it out of?">
+    </div>
+    <div class="buttons">
+    <button class="buttonCalc" id="btn">Calculate</button>
+    <button type="reset" class="buttonReset" id="btn">Reset</button>
+    </div>
+    <ul class="list-container">
+
+    </ul>
+  </div>
+
+
+
+  <!-- modal -->
+  <div class="modal">
+    <div id="result" class="modal-content">
+      <h1 class="text-win">You win</h1>
+      <p>Computer Chose Rock</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
