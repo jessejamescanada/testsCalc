@@ -7,9 +7,14 @@ const BTNreset = document.querySelector('.buttonReset');
 const modal = document.querySelector('.modal');
 const result = document.querySelector('#result');
 
+const test = document.querySelector('.test');
+
+let scores = [];
+
 function grades(){
   let g = userScore.value;
   let s = totalScore.value;
+  
   let total = ((g/s) * 100).toFixed(2);
   if(total >= 90){
     result.innerHTML = `
@@ -32,8 +37,27 @@ function grades(){
     <h1 class="text-win">You got a ${total}% and failed</h1>
     <i class="fas fa-thumbs-down fa-5x"></i>`
   }
+  scores.push(total);
+  getAverage();
   modal.style.display = 'block';
+  
 }
+
+function getAverage(){
+  const reducer = (acc, currentVal) => parseFloat(acc) + parseFloat(currentVal);
+  console.log(scores.reduce(reducer));
+  t = scores.reduce(reducer);
+  let avg = (t / scores.length).toFixed(2);
+  console.log(avg)
+  // test.innerHTML = `<h1>${scores.reduce(reducer)}</h1>`
+  // test.innerHTML = `<h1>Average is ${avg}</h1>`
+  if(avg >= 90){
+    test.innerHTML=
+    `<h1 class="test"> Average is ${avg}</h1>
+    <i class="far fa-laugh-beam fa-5x"></i>`
+  }
+}
+
 
 // reset button
 function clearInput(){
