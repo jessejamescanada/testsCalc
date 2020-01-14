@@ -55,6 +55,22 @@ function getAverage(){
     test.innerHTML=
     `<h1 class="test"> Average is ${avg}</h1>
     <i class="far fa-laugh-beam fa-5x"></i>`
+  }else if(avg >= 80 && avg <=89){
+    test.innerHTML=
+    `<h1 class="test"> Average is ${avg}</h1>
+    <i class="far fa-smile-beam fa-5x"></i>`
+  }else if(avg >= 70 && avg <=79){
+    test.innerHTML=
+    `<h1 class="test"> Average is ${avg}</h1>
+    <i class="far fa-smile fa-5x"></i>`
+  }else if(avg >= 60 && avg <=69){
+    test.innerHTML=
+    `<h1 class="test"> Average is ${avg}</h1>
+    <i class="far fa-grimace fa-5x"></i>`
+  }else{
+    test.innerHTML=
+    `<h1 class="test"> Average is ${avg}</h1>
+    <i class="fas fa-thumbs-down fa-5x"></i>`
   }
 }
 
